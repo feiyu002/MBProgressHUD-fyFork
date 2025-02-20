@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name         = "MBProgressHUD"
-  s.version      = "1.2.0"
+  s.name         = "MBProgressHUD-fyFork"
+  s.version      = "1.2.1"
   s.summary      = "An iOS activity indicator view."
   s.description  = <<-DESC
                     MBProgressHUD is an iOS drop-in class that displays a translucent HUD
@@ -10,11 +10,15 @@ Pod::Spec.new do |s|
                    DESC
   s.homepage     = "http://www.bukovinski.com"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
-  s.author       = { 'Matej Bukovinski' => 'matej@bukovinski.com' }
-  s.source       = { :git => "https://github.com/matej/MBProgressHUD.git", :tag => s.version.to_s }
-  s.ios.deployment_target = '8.0'
-  s.tvos.deployment_target = '9.0'
+  s.author       = { 'feiyu002' => 'pang_fengyue@126.com' }
+  s.source       = { :git => "https://github.com/feiyu002/MBProgressHUD-fyFork.git", :tag => s.version.to_s }
+  s.platform = :ios, '12.0'
+  s.ios.deployment_target = '12.0'
+  s.swift_version = '5.0'
   s.source_files = '*.{h,m}'
+  s.resource_bundles = {
+    'MBProgressHUD' => ['Resources/PrivacyInfo.xcprivacy'] # 添加 PrivacyInfo 文件
+  }
   s.frameworks   = "CoreGraphics", "QuartzCore"
   s.requires_arc = true
 end
